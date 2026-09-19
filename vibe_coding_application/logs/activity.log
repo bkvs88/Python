@@ -1,0 +1,10 @@
+2026-09-10 22:25:33,817 | expense_tracker.main           | INFO     | Application started - Personal Expense Tracker v1.0.0
+2026-09-10 22:26:49,731 | expense_tracker.storage_manager | DEBUG    | Wrote data to /Users/sravankumarbandaru/Desktop/Euron_Super30/works/vibe_coding_application/data/auth.json
+2026-09-10 22:26:49,731 | expense_tracker.auth_service   | INFO     | Login successful
+2026-09-10 22:26:49,731 | expense_tracker.main           | INFO     | User authenticated, entering main menu
+2026-09-10 22:27:05,987 | expense_tracker.storage_manager | DEBUG    | Loaded 2 expenses
+2026-09-10 22:27:05,988 | expense_tracker.storage_manager | DEBUG    | Wrote data to /Users/sravankumarbandaru/Desktop/Euron_Super30/works/vibe_coding_application/data/expenses.json
+2026-09-10 22:27:05,988 | expense_tracker.expense_service | INFO     | Expense added: EXP003 | ₹100.00 | Food | 2016-09-01
+2026-09-10 22:27:05,988 | expense_tracker.storage_manager | DEBUG    | Loaded 3 expenses
+2026-09-10 22:27:14,773 | expense_tracker.storage_manager | DEBUG    | Loaded 3 expenses
+2026-09-10 22:27:14,773 | expense_tracker.report_service | INFO     | Daily report generated for 2016-09-01: 1 expenses, total ₹100.00
