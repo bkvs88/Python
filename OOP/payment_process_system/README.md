@@ -17,6 +17,52 @@ A helper function `process_payments()` accepts a list of `Payment` objects and c
 
 ---
 
+## Understanding `from abc import ABC, abstractmethod`
+
+Python does not natively enforce abstract classes or interfaces through standard syntax like some other languages (e.g., Java or C++). Instead, it uses the built-in standard library module called **`abc`** (**A**bstract **B**ase **C**lasses).
+
+### 1. What is `ABC`?
+`ABC` is a helper class provided by the `abc` module. By inheriting from `ABC`, a Python class becomes an **Abstract Base Class**.
+
+* **Enforces standard contracts:** It serves as a parent blueprint for concrete subclasses.
+* **Prevents instantiation:** You cannot instantiate an abstract class directly. Calling `Payment(100)` will raise a `TypeError`.
+
+### 2. What is `@abstractmethod`?
+`@abstractmethod` is a decorator used inside an abstract class to define methods that **must** be implemented by any child class.
+
+* **No body required:** The method usually contains only `pass` or a docstring in the base class.
+* **Mandatory overriding:** If a child class fails to override any `@abstractmethod`, Python prevents that subclass from being instantiated as well.
+
+### Code Example
+
+```python
+from abc import ABC, abstractmethod
+
+# 1. Base Abstract Class
+class Payment(ABC):
+    def __init__(self, amount):
+        self.amount = amount
+
+    @abstractmethod
+    def pay(self):
+        """Abstract method - must be implemented by subclasses"""
+        pass
+
+# 2. Subclass overriding the abstract method
+class CreditCardPayment(Payment):
+    def __init__(self, amount, card_number):
+        super().__init__(amount)
+        self.card_number = card_number
+
+    def pay(self):
+        print(f"Paid ${self.amount} using Credit Card ending in {self.card_number[-4:]}")
+
+# Example Usage
+# p = Payment(100)           # ❌ Raises TypeError: Can't instantiate abstract class Payment
+cc = CreditCardPayment(100, "1234567890123456") 
+cc.pay()                     # ✅ Output: Paid $100 using Credit Card ending in 3456
+
+
 ## Feature / Functionalities
 
 | Method | Type | Description |
