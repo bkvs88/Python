@@ -19,7 +19,7 @@ A helper function `process_payments()` accepts a list of `Payment` objects and c
 
 ## Understanding `from abc import ABC, abstractmethod`
 
-Python does not natively enforce abstract classes or interfaces through standard syntax like some other languages (e.g., Java or C++). Instead, it uses the built-in standard library module called **`abc`** (**A**bstract **B**ase **C**lasses).
+Python does not natively enforce abstract classes or interfaces through standard syntax like some other languages (e.g., Java or C++). Instead, it uses the built-in standard library module called **`abc`** (**A**bstract **B**ase **C**lasses) (ABC).
 
 ### 1. What is `ABC`?
 `ABC` is a helper class provided by the `abc` module. By inheriting from `ABC`, a Python class becomes an **Abstract Base Class**.
