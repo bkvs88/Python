@@ -1,5 +1,5 @@
 
-```markdown
+
 # 💳 Payment Processing System
 
 A payment-processing example built with **Object-Oriented Programming (OOP)** in Python. It uses an **abstract class** to define a payment contract and demonstrates **runtime polymorphism** by executing the same `.pay()` method across different payment objects.
