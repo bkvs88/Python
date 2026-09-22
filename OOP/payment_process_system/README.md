@@ -1,4 +1,3 @@
-Here is the updated, unified [README.md](https://github.com/bkvs88/Python/blob/main/OOP/payment_process_system/README.md?utm_source=gemini) file incorporating the detailed technical breakdown of **Abstraction** and **Polymorphism**:
 
 ```markdown
 # 💳 Payment Processing System
